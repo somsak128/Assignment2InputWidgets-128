@@ -118,7 +118,10 @@ late ListItem _selectedItem;
                       });
 
                   },),
-                  
+                  Text('Item selected: ' + 
+                  _selectedItem.value.toString() + 
+                  '' + 
+                  _selectedItem.name),
 
                   // บทเรียนchackbox
                   // CheckboxListTile(
@@ -250,6 +253,7 @@ late ListItem _selectedItem;
   // ignore: non_constant_identifier_names
   TextFormField User1() {
     return TextFormField(
+                  obscureText: true,   
                   controller: _passwordcontroller,
                   validator: (value){
                     if (value!.isEmpty){
